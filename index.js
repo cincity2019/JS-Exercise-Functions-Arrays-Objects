@@ -78,10 +78,19 @@ getName({ id: 1, name: 'Lelia', email: 'lelia@lelia.com' });
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-	/* code here */
-}
+function makeSmartPerson(name) {
+	const smartPerson = {
+		name: name,
+		sum: function(num1, num2) {
+			return num1 + num2;
+		},
+		speak: function() {
+			return `Hello, my name is ${name}`;
+		}
+	};
 
+	return smartPerson;
+}
 /**
  * ### Challenge `getCarInfoByIndex`
  * 
@@ -94,8 +103,8 @@ function makeSmartPerson(/* code here */) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(/* code here */) {
-	/* code here */
+function getCarInfoByIndex(inventory, carIndex) {
+	return `This is a ${inventory[carIndex].car_make} ${inventory[carIndex].car_model}`;
 }
 
 /**
@@ -109,9 +118,7 @@ function getCarInfoByIndex(/* code here */) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-	/* code here */
-}
+function getLastCarInfo(inventory) {}
 
 /**
  * ### Challenge `getCarInfoById`
@@ -125,7 +132,7 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
+function getCarInfoById(inventory, carId) {
 	/* code here */
 }
 
